@@ -1,11 +1,12 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 
 namespace JimmyProject.PagesObjects
 {
-    public class LoginPageObjects
+    public class LoginPageObjects : BasePage
     {
-        IWebDriver driver;
+        
         IWebElement UserName => driver.FindElement(By.Id("txtUserName"));
         IWebElement Password => driver.FindElement(By.Id("txtPassword"));
         public LoginPageObjects(IWebDriver edriver)
@@ -17,7 +18,11 @@ namespace JimmyProject.PagesObjects
             UserName.SendKeys(uname);
             Password.SendKeys(pawd);
         }
+        public void ThenISeeApplicationHomePage()
+        { string actuals = driver.FindElement(By.ClassName("h2Contentleft")).Text.Trim();
+           Assert.AreEqual("Log on to CommBiz", actuals);
 
-
+        }
+        
     }
 }

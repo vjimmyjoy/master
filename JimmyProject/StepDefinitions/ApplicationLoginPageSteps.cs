@@ -1,7 +1,11 @@
-﻿using JimmyProject.PagesObjects;
+﻿using AventStack.ExtentReports;
+using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.Reporter;
+using JimmyProject.PagesObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 using TechTalk.SpecFlow;
 
 namespace JimmyProject.StepDefinitions
@@ -10,50 +14,40 @@ namespace JimmyProject.StepDefinitions
     class ApplicationLoginPageSteps : BaseStep
     {
         LoginPageObjects loginPageObjects;
-
-        [BeforeScenario]
-        public void TeCleastnup()
+        //[BeforeTestRun]
+        public ApplicationLoginPageSteps()
         {
-            
+            loginPageObjects = new LoginPageObjects(driver);
         }
 
         [Given(@"I am in Application Home Page")]
         public void GivenIAmInApplicationHomePage()
         {
-            loginPageObjects = new LoginPageObjects(driver);
-            setup();
+            loginPageObjects.ThenISeeApplicationHomePage();          
         }
-
         [Given(@"I enter '(.*)' and '(.*)'")]
         public void GivenIEnterAnd(string p0, string p1)
         {
             loginPageObjects.ApplicationLogin(p0,p1);
         }
-
         [When(@"I click submit")]
         public void WhenIClickSubmit()
         {
-            ScenarioContext.Current.Pending();
+            Console.WriteLine("");
         }
 
         [Then(@"I see Application Home Page")]
         public void ThenISeeApplicationHomePage()
         {
-            ScenarioContext.Current.Pending();
+            Console.WriteLine("");
         }
 
         [Then(@"I LogOff")]
         public void ThenILogOff()
         {
-            ScenarioContext.Current.Pending();
-        }
+            Console.WriteLine("");
 
-        [AfterScenario]
-        public void TestCleanup()
-        {
-            driver.Close();
-
-        }
+        }  
 
 
     }

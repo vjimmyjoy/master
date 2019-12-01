@@ -9,5 +9,5 @@ Scenario Outline: Succesful Login To Application
 	Then I see Application Home Page
 	Then I LogOff
 Examples: 
-| Username     | Password   |
+| Username     | Password |
 | fox100596054 | Password04 |
