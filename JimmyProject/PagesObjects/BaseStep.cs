@@ -43,7 +43,8 @@ namespace JimmyProject.PagesObjects
             extentReports.AddSystemInfo("Environment", "Journey of Quality");
             extentReports.AddSystemInfo("User Name", "Sanoj");
             extentReports.AttachReporter(htmlReporter);
-            extentReports.CreateTest(FeatureContext.Current.FeatureInfo.Title);          
+            extentReports.CreateTest(FeatureContext.Current.FeatureInfo.Title); 
+                     
         }
         [AfterScenario]
         public void TestCleanup()
