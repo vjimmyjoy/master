@@ -13,9 +13,13 @@ namespace JimmyProject.StepDefinitions
     [Binding]
     class ApplicationLoginPageSteps : BaseStep
     {
-        LoginPageObjects loginPageObjects;
+        LoginPageObjects loginPageObjects ;
         //[BeforeTestRun]
-        public ApplicationLoginPageSteps()
+        //public  ApplicationLoginPageSteps() : base (IWebDriver driver)
+        //{
+        //    loginPageObjects = new LoginPageObjects(driver);
+        //}
+        protected override void ClassInitialize()
         {
             loginPageObjects = new LoginPageObjects(driver);
         }

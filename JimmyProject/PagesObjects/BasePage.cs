@@ -12,8 +12,5 @@ namespace JimmyProject.PagesObjects
     public class BasePage
     {
         public IWebDriver driver;
-       
-        public ApplicationExtentReports applicationExtentReports;
-
     }
 }
