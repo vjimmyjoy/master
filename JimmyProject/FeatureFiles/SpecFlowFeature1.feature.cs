@@ -72,7 +72,7 @@ namespace JimmyProject.FeatureFiles
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Succesful Login To Application")]
         [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("fox100596054", "Password04", null)]
+        [NUnit.Framework.TestCaseAttribute("", "", null)]
         public virtual void SuccesfulLoginToApplication(string username, string password, string[] exampleTags)
         {
             string[] @__tags = new string[] {

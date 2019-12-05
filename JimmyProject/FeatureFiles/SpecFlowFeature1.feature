@@ -10,4 +10,4 @@ Scenario Outline: Succesful Login To Application
 	Then I LogOff
 Examples: 
 | Username     | Password |
-| fox100596054 | Password04 |
+|  |  |
