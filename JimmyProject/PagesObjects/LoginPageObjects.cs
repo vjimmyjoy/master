@@ -23,7 +23,7 @@ namespace JimmyProject.PagesObjects
         { string actuals = driver.FindElement(By.ClassName("h2Contentleft")).Text.Trim();
            Assert.AreEqual("Log on to CommBiz", actuals);
             Console.Write("Making my application little more safer");
-
+            Console.WriteLine("Added from origin master");
         }
         
     }
