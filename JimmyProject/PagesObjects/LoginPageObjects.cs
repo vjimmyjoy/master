@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using System;
 
 namespace JimmyProject.PagesObjects
 {
@@ -21,6 +22,7 @@ namespace JimmyProject.PagesObjects
         public void ThenISeeApplicationHomePage()
         { string actuals = driver.FindElement(By.ClassName("h2Contentleft")).Text.Trim();
            Assert.AreEqual("Log on to CommBiz", actuals);
+            Console.Write("Making my application little more safer");
 
         }
         
