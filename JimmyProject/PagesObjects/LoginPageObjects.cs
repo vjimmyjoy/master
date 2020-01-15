@@ -24,6 +24,8 @@ namespace JimmyProject.PagesObjects
            Assert.AreEqual("Log on to CommBiz", actuals);
             Console.Write("Making my application little more safer");
             Console.WriteLine("Added from origin master");
+            Console.WriteLine("Added from Orgin master 2");
+            Console.WriteLine("Added to feature branch of testBracnhLocal");
         }
         
     }
